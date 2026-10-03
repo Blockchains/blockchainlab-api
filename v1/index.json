@@ -1,0 +1,110 @@
+{
+ "name": "Blockchain Lab Open Data API",
+ "version": "v1",
+ "generated_at": "2026-10-03T18:19:50.697Z",
+ "docs": "https://blockchains.github.io/blockchainlab-api/",
+ "openapi": "https://blockchains.github.io/blockchainlab-api/openapi.yaml",
+ "built_by": "Blockchain Lab — https://blockchainlab.com?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api",
+ "errors": [],
+ "datasets": [
+  {
+   "dataset": "bips",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/bips.json",
+   "description": "Bitcoin Improvement Proposals index parsed from bitcoin/bips.",
+   "source": "github.com/bitcoin/bips",
+   "source_url": "https://github.com/bitcoin/bips",
+   "count": 213,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "chains",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/chains.json",
+   "description": "EVM chain registry: chain IDs, native currency, public RPC endpoints and explorers.",
+   "source": "chainid.network (ethereum-lists/chains)",
+   "source_url": "https://chainid.network/chains.json",
+   "count": 2783,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "chains-tvl",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/chains-tvl.json",
+   "description": "DeFi TVL by chain (USD). Snapshot from DefiLlama.",
+   "source": "DefiLlama",
+   "source_url": "https://api.llama.fi/v2/chains",
+   "count": 329,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "eips",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/eips.json",
+   "description": "EIPS index (number, title, status, type, category) parsed from ethereum/EIPs.",
+   "source": "github.com/ethereum/EIPs",
+   "source_url": "https://github.com/ethereum/EIPs/tree/master/EIPS",
+   "count": 593,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "ercs",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/ercs.json",
+   "description": "ERCS index (number, title, status, type, category) parsed from ethereum/ERCs.",
+   "source": "github.com/ethereum/ERCs",
+   "source_url": "https://github.com/ethereum/ERCs/tree/master/ERCS",
+   "count": 617,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "events",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/events.json",
+   "description": "Upcoming blockchain events from the Blockchain Lab feeds.",
+   "source": "Blockchains/blockchainlab-feeds (ethglobal.com/events; devpost.com (blockchain hackathons))",
+   "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json",
+   "count": 6,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "glossary",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/glossary.json",
+   "description": "Plain-language blockchain glossary from blockchainlab.com (concepts, protocol profiles, failure classes, stack layers).",
+   "source": "blockchainlab.com/learn/glossary",
+   "source_url": "https://blockchainlab.com/learn/glossary",
+   "count": 80,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "grants",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/grants.json",
+   "description": "Directory of blockchain ecosystem grant / funding programmes with official links. Curated by Blockchain Lab; link status re-checked nightly. No amounts are listed — read each programme's own page.",
+   "source": "Official programme pages (curated)",
+   "source_url": "https://github.com/Blockchains/blockchainlab-api/blob/main/data/grants.json",
+   "count": 22,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "hackathons",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/hackathons.json",
+   "description": "Open and upcoming blockchain hackathons (Devpost, ETHGlobal).",
+   "source": "Blockchains/blockchainlab-feeds (devpost.com/api/hackathons (theme Blockchain, open+upcoming); ethglobal.com/events (future hackathons); X posts (leads only))",
+   "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/hackathons/latest.json",
+   "count": 3,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "protocols",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/protocols.json",
+   "description": "Top 500 DeFi protocols by TVL (USD), excluding CEXs. Snapshot from DefiLlama; not investment advice.",
+   "source": "DefiLlama",
+   "source_url": "https://api.llama.fi/protocols",
+   "count": 500,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  },
+  {
+   "dataset": "whitepapers",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/whitepapers.json",
+   "description": "Blockchain Lab research corpus — whitepaper metadata (no paper text). Original sources linked.",
+   "source": "Blockchain Lab /api/v1/papers",
+   "source_url": "https://blockchainlab.com/api/v1/papers",
+   "count": 607,
+   "generated_at": "2026-10-03T18:19:50.697Z"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Blockchain Lab Open Data API",
+  "version": "1.0.0",
+  "description": "Free, static, CORS-enabled JSON datasets for blockchain builders: chains, DeFi TVL, hackathons, events, whitepapers, glossary, grants, EIPs/ERCs/BIPs. Rebuilt nightly from public sources. Built by Blockchain Lab \u2014 https://blockchainlab.com",
+  "contact": {
+   "name": "Blockchain Lab",
+   "url": "https://blockchainlab.com/?utm_source=github&utm_medium=openapi&utm_campaign=blockchainlab-api"
+  },
+  "license": {
+   "name": "Code MIT; data belongs to each named source",
+   "url": "https://github.com/Blockchains/blockchainlab-api/blob/main/LICENSE"
+  }
+ },
+ "servers": [
+  {
+   "url": "https://blockchains.github.io/blockchainlab-api"
+  }
+ ],
+ "paths": {
+  "/v1/index.json": {
+   "get": {
+    "summary": "Dataset catalogue",
+    "operationId": "getIndex",
+    "tags": [
+     "meta"
+    ],
+    "responses": {
+     "200": {
+      "description": "List of datasets with counts, sources and generation time",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/bips.json": {
+   "get": {
+    "summary": "Bitcoin Improvement Proposals index parsed from bitcoin/bips.",
+    "operationId": "getBips",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: github.com/bitcoin/bips (https://github.com/bitcoin/bips). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/chains.json": {
+   "get": {
+    "summary": "EVM chain registry: chain IDs, native currency, public RPC endpoints and explorers.",
+    "operationId": "getChains",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: chainid.network (ethereum-lists/chains) (https://chainid.network/chains.json). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/chains-tvl.json": {
+   "get": {
+    "summary": "DeFi TVL by chain (USD). Snapshot from DefiLlama.",
+    "operationId": "getChainsTvl",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama (https://api.llama.fi/v2/chains). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/eips.json": {
+   "get": {
+    "summary": "EIPS index (number, title, status, type, category) parsed from ethereum/EIPs.",
+    "operationId": "getEips",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: github.com/ethereum/EIPs (https://github.com/ethereum/EIPs/tree/master/EIPS). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/ercs.json": {
+   "get": {
+    "summary": "ERCS index (number, title, status, type, category) parsed from ethereum/ERCs.",
+    "operationId": "getErcs",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: github.com/ethereum/ERCs (https://github.com/ethereum/ERCs/tree/master/ERCS). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/events.json": {
+   "get": {
+    "summary": "Upcoming blockchain events from the Blockchain Lab feeds.",
+    "operationId": "getEvents",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: Blockchains/blockchainlab-feeds (ethglobal.com/events; devpost.com (blockchain hackathons)) (https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/glossary.json": {
+   "get": {
+    "summary": "Plain-language blockchain glossary from blockchainlab.com (concepts, protocol profiles, failure classes, stack layers).",
+    "operationId": "getGlossary",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: blockchainlab.com/learn/glossary (https://blockchainlab.com/learn/glossary). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/grants.json": {
+   "get": {
+    "summary": "Directory of blockchain ecosystem grant / funding programmes with official links. Curated by Blockchain Lab; link status re-checked nightly. No amounts are listed \u2014 read each programme's own page.",
+    "operationId": "getGrants",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: Official programme pages (curated) (https://github.com/Blockchains/blockchainlab-api/blob/main/data/grants.json). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/hackathons.json": {
+   "get": {
+    "summary": "Open and upcoming blockchain hackathons (Devpost, ETHGlobal).",
+    "operationId": "getHackathons",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: Blockchains/blockchainlab-feeds (devpost.com/api/hackathons (theme Blockchain, open+upcoming); ethglobal.com/events (future hackathons); X posts (leads only)) (https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/hackathons/latest.json). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/protocols.json": {
+   "get": {
+    "summary": "Top 500 DeFi protocols by TVL (USD), excluding CEXs. Snapshot from DefiLlama; not investment advice.",
+    "operationId": "getProtocols",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama (https://api.llama.fi/protocols). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/whitepapers.json": {
+   "get": {
+    "summary": "Blockchain Lab research corpus \u2014 whitepaper metadata (no paper text). Original sources linked.",
+    "operationId": "getWhitepapers",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: Blockchain Lab /api/v1/papers (https://blockchainlab.com/api/v1/papers). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Envelope"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Envelope": {
+    "type": "object",
+    "required": [
+     "dataset",
+     "generated_at",
+     "source",
+     "source_url",
+     "data"
+    ],
+    "properties": {
+     "dataset": {
+      "type": "string"
+     },
+     "description": {
+      "type": "string"
+     },
+     "generated_at": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "source": {
+      "type": "string"
+     },
+     "source_url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "built_by": {
+      "type": "string"
+     },
+     "licence_note": {
+      "type": "string"
+     },
+     "count": {
+      "type": "integer"
+     },
+     "data": {
+      "type": "array",
+      "items": {
+       "type": "object"
+      }
+     }
+    }
+   }
+  }
+ }
+}

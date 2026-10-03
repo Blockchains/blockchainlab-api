@@ -1,0 +1,178 @@
+[
+ {
+  "id": "ethereum-foundation-esp",
+  "name": "Ethereum Foundation Ecosystem Support Program",
+  "ecosystem": "Ethereum",
+  "operator": "Ethereum Foundation",
+  "url": "https://esp.ethereum.foundation/",
+  "type": "grants"
+ },
+ {
+  "id": "w3f-grants",
+  "name": "Web3 Foundation Grants Program",
+  "ecosystem": "Polkadot / Kusama",
+  "operator": "Web3 Foundation",
+  "url": "https://github.com/w3f/Grants-Program",
+  "type": "grants"
+ },
+ {
+  "id": "polkadot-opengov-treasury",
+  "name": "Polkadot Treasury (OpenGov)",
+  "ecosystem": "Polkadot",
+  "operator": "Polkadot on-chain treasury",
+  "url": "https://wiki.polkadot.com/learn/learn-polkadot-opengov-treasury/",
+  "type": "treasury"
+ },
+ {
+  "id": "solana-foundation",
+  "name": "Solana Foundation Grants & Funding",
+  "ecosystem": "Solana",
+  "operator": "Solana Foundation",
+  "url": "https://solana.org/grants-funding",
+  "type": "grants"
+ },
+ {
+  "id": "arbitrum-foundation",
+  "name": "Arbitrum Foundation Grants",
+  "ecosystem": "Arbitrum",
+  "operator": "Arbitrum Foundation",
+  "url": "https://arbitrum.foundation/grants",
+  "type": "grants"
+ },
+ {
+  "id": "base-ecosystem-fund",
+  "name": "Base Ecosystem Fund / builder funding",
+  "ecosystem": "Base",
+  "operator": "Base",
+  "url": "https://docs.base.org/get-started/base-ecosystem-fund",
+  "type": "grants / investment"
+ },
+ {
+  "id": "starknet-grants",
+  "name": "Starknet Grants",
+  "ecosystem": "Starknet",
+  "operator": "Starknet Foundation",
+  "url": "https://www.starknet.io/grants/",
+  "type": "grants"
+ },
+ {
+  "id": "filecoin-devgrants",
+  "name": "Filecoin Dev Grants",
+  "ecosystem": "Filecoin",
+  "operator": "Filecoin Foundation",
+  "url": "https://github.com/filecoin-project/devgrants",
+  "type": "grants"
+ },
+ {
+  "id": "project-catalyst",
+  "name": "Project Catalyst",
+  "ecosystem": "Cardano",
+  "operator": "Cardano community",
+  "url": "https://projectcatalyst.io/",
+  "type": "community fund"
+ },
+ {
+  "id": "sui-programs-funding",
+  "name": "Sui Programs & Funding",
+  "ecosystem": "Sui",
+  "operator": "Sui Foundation",
+  "url": "https://www.sui.io/programs-funding",
+  "type": "grants"
+ },
+ {
+  "id": "near-get-funding",
+  "name": "NEAR Ecosystem Funding",
+  "ecosystem": "NEAR",
+  "operator": "NEAR Foundation",
+  "url": "https://www.near.org/ecosystem/get-funding",
+  "type": "grants"
+ },
+ {
+  "id": "uniswap-foundation",
+  "name": "Uniswap Foundation (Build / grants)",
+  "ecosystem": "Uniswap",
+  "operator": "Uniswap Foundation",
+  "url": "https://www.uniswapfoundation.org/build",
+  "type": "grants"
+ },
+ {
+  "id": "aave-grants-dao",
+  "name": "Aave Grants DAO",
+  "ecosystem": "Aave",
+  "operator": "Aave Grants DAO",
+  "url": "https://aavegrants.org/",
+  "type": "grants"
+ },
+ {
+  "id": "zcash-community-grants",
+  "name": "Zcash Community Grants",
+  "ecosystem": "Zcash",
+  "operator": "Zcash Community Grants",
+  "url": "https://zcashcommunitygrants.org/",
+  "type": "grants"
+ },
+ {
+  "id": "opensats",
+  "name": "OpenSats",
+  "ecosystem": "Bitcoin / Nostr",
+  "operator": "OpenSats",
+  "url": "https://opensats.org/",
+  "type": "grants"
+ },
+ {
+  "id": "hrf-bitcoin-dev-fund",
+  "name": "HRF Bitcoin Development Fund",
+  "ecosystem": "Bitcoin",
+  "operator": "Human Rights Foundation",
+  "url": "https://hrf.org/program/financial-freedom/bitcoin-development-fund/",
+  "type": "grants"
+ },
+ {
+  "id": "spiral",
+  "name": "Spiral",
+  "ecosystem": "Bitcoin",
+  "operator": "Block, Inc.",
+  "url": "https://spiral.xyz/",
+  "type": "grants"
+ },
+ {
+  "id": "brink",
+  "name": "Brink developer programs",
+  "ecosystem": "Bitcoin",
+  "operator": "Brink",
+  "url": "https://brink.dev/programs",
+  "type": "grants / fellowships"
+ },
+ {
+  "id": "tezos-foundation",
+  "name": "Tezos Foundation Grants",
+  "ecosystem": "Tezos",
+  "operator": "Tezos Foundation",
+  "url": "https://tezos.foundation/grants/",
+  "type": "grants"
+ },
+ {
+  "id": "protocol-guild",
+  "name": "Protocol Guild",
+  "ecosystem": "Ethereum",
+  "operator": "Protocol Guild",
+  "url": "https://www.protocolguild.org/",
+  "type": "core-contributor funding"
+ },
+ {
+  "id": "mina-grants",
+  "name": "Mina Foundation Grants",
+  "ecosystem": "Mina",
+  "operator": "Mina Foundation",
+  "url": "https://minaprotocol.com/grants",
+  "type": "grants"
+ },
+ {
+  "id": "stellar-community-fund",
+  "name": "Stellar Community Fund",
+  "ecosystem": "Stellar",
+  "operator": "Stellar Development Foundation",
+  "url": "https://communityfund.stellar.org/",
+  "type": "community fund"
+ }
+]
