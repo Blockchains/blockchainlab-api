@@ -1,7 +1,7 @@
 {
  "name": "Blockchain Lab Open Data API",
  "version": "v1",
- "generated_at": "2026-10-03T18:33:24.546Z",
+ "generated_at": "2026-10-03T18:34:05.552Z",
  "docs": "https://blockchains.github.io/blockchainlab-api/",
  "openapi": "https://blockchains.github.io/blockchainlab-api/openapi.yaml",
  "built_by": "Blockchain Lab — https://blockchainlab.com?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api",
@@ -14,7 +14,7 @@
    "source": "github.com/bitcoin/bips",
    "source_url": "https://github.com/bitcoin/bips",
    "count": 213,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "chains",
@@ -23,7 +23,7 @@
    "source": "chainid.network (ethereum-lists/chains)",
    "source_url": "https://chainid.network/chains.json",
    "count": 2783,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "chains-tvl",
@@ -32,7 +32,7 @@
    "source": "DefiLlama",
    "source_url": "https://api.llama.fi/v2/chains",
    "count": 329,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "eips",
@@ -41,7 +41,7 @@
    "source": "github.com/ethereum/EIPs",
    "source_url": "https://github.com/ethereum/EIPs/tree/master/EIPS",
    "count": 593,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "ercs",
@@ -50,7 +50,7 @@
    "source": "github.com/ethereum/ERCs",
    "source_url": "https://github.com/ethereum/ERCs/tree/master/ERCS",
    "count": 617,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "events",
@@ -59,7 +59,7 @@
    "source": "Blockchains/blockchainlab-feeds (ethglobal.com/events; devpost.com (blockchain hackathons))",
    "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json",
    "count": 6,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "glossary",
@@ -68,7 +68,7 @@
    "source": "blockchainlab.com/learn/glossary",
    "source_url": "https://blockchainlab.com/learn/glossary",
    "count": 80,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "grants",
@@ -77,7 +77,7 @@
    "source": "Official programme pages (curated)",
    "source_url": "https://github.com/Blockchains/blockchainlab-api/blob/main/data/grants.json",
    "count": 22,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "hackathons",
@@ -86,7 +86,7 @@
    "source": "Blockchains/blockchainlab-feeds (devpost.com/api/hackathons (theme Blockchain, open+upcoming); ethglobal.com/events (future hackathons); X posts (leads only))",
    "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/hackathons/latest.json",
    "count": 3,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "protocols",
@@ -95,7 +95,7 @@
    "source": "DefiLlama",
    "source_url": "https://api.llama.fi/protocols",
    "count": 500,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   },
   {
    "dataset": "whitepapers",
@@ -104,7 +104,7 @@
    "source": "Blockchain Lab /api/v1/papers",
    "source_url": "https://blockchainlab.com/api/v1/papers",
    "count": 607,
-   "generated_at": "2026-10-03T18:33:24.546Z"
+   "generated_at": "2026-10-03T18:34:05.552Z"
   }
  ]
 }

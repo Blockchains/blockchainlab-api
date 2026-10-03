@@ -71,7 +71,7 @@ for (const [name, path, desc] of [["hackathons", "feeds/hackathons/latest.json",
 // 4. Whitepapers metadata (Blockchain Lab research corpus)
 await step("whitepapers", async () => {
   const raw = await getJSON(`${SITE}/api/v1/papers`);
-  const data = (raw.papers || []).map(p => ({ id: p.document_id, slug: p.slug, title: p.title, authors: p.authors, year: p.year, category: p.category, paper_type: p.paper_type, topics: p.topics, original_source_url: p.source_url, blockchainlab_url: `${SITE}/whitepaper/${p.slug}${UTM}` }));
+  const data = (raw.papers || []).map(p => ({ id: p.document_id, slug: p.slug, title: p.title, authors: p.authors, year: p.year, category: p.category, paper_type: p.paper_type, topics: p.topics, original_source_url: p.source_url, blockchainlab_url: (p.canonical_url || `${SITE}/research/corpus/papers/${p.slug}`) + UTM }));
   write("whitepapers", { description: "Blockchain Lab research corpus — whitepaper metadata (no paper text). Original sources linked.", source: "Blockchain Lab /api/v1/papers", source_url: `${SITE}/api/v1/papers`, data, extra: { upstream_note: raw.note } });
 });
 
