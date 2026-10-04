@@ -87,6 +87,45 @@ Run locally: `node scripts/build.mjs && python3 scripts/openapi.py`
 | [blockchain-interview-questions](https://github.com/Blockchains/blockchain-interview-questions) | Interview question bank |
 | [blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds) | Hackathon / event / X-intel feeds |
 
+<!-- blocks:start -->
+## Use as a building block
+
+> **For AI agents and builders:** read [`AGENTS.md`](AGENTS.md) (setup, commands, structure, rules), [`llms.txt`](llms.txt) (doc map) and the machine-readable [`blocks.json`](blocks.json) ([schema](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md)). How all Blockchains blocks fit together: **[Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)** · org catalogue: [https://blockchains.github.io/blocks.json](https://blockchains.github.io/blocks.json).
+
+**What it exports**
+
+| Export | Type | Install / access |
+|---|---|---|
+| `GET /v1/{dataset}.json` | http | `curl -s https://blockchains.github.io/blockchainlab-api/v1/chains.json` |
+| `GET /v1/index.json` | http | `catalogue: dataset, url, schema, count, generated_at, stale` |
+| `GET /v1/schemas/{dataset}.schema.json` | http | `JSON Schema per dataset` |
+| `openapi.yaml` | file | `https://blockchains.github.io/blockchainlab-api/openapi.yaml` |
+
+**Minimal example** (live endpoints, checked 2026-10-04)
+
+```bash
+# Base mainnet RPCs + explorer
+curl -s https://blockchains.github.io/blockchainlab-api/v1/chains.json | jq '.data[] | select(.chainId==8453) | {name, rpc: .rpc[:3]}'
+# Healthy public RPCs for Ethereum, fastest first
+curl -s https://blockchains.github.io/blockchainlab-api/v1/rpc-health.json | jq '[.data[] | select(.chain=="ethereum" and .healthy)] | sort_by(.latency_ms) | .[:3] | map(.url)'
+```
+
+**Inputs → outputs**
+
+- In: `dataset` (path segment) bips, bridges, chains, chains-tvl, dex-volumes, eips, ercs, events, fees, glossary, grants, hackathons, l2-metrics, protocols, rpc-health, sanctioned-addresses, security-incidents, stablecoins, whitepapers, yields
+- Out: `envelope` (JSON) {dataset, api_version, schema_version, schema_url, generated_at, source, source_url, count, data[]}
+
+**Composes with**
+
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): typed TS/Python client generated from these schemas
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): 43 MCP tools, many backed by these datasets
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): browser tools read chains and EIP/ERC/BIP data from here
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub pages and AI briefs are built on it
+- [Blockchains/blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds): source of the hackathons and events datasets
+
+**Versioning & stability:** `stable`. Path-versioned (`/v1/`). Every envelope carries a semver `schema_version`; breaking changes bump the major and get a new path. The nightly job refuses to publish data that fails its JSON Schema; if a source fails, the previous file is kept and flagged `stale` in `index.json`. See CHANGELOG.md.
+<!-- blocks:end -->
+
 ## Licence
 
 Code: MIT. Data: belongs to each named source — check its terms. Glossary text © Blockchain Lab; please attribute and link [blockchainlab.com](https://blockchainlab.com/?utm_source=github&utm_medium=readme&utm_campaign=blockchainlab-api).

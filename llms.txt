@@ -1,0 +1,28 @@
+# blockchainlab-api
+
+> Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.
+
+## Docs
+
+- [README](https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/README.md): overview, install and the 'Use as a building block' section
+- [AGENTS.md](https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/AGENTS.md): setup, build/test commands, structure map, conventions and rules for AI coding agents
+- [blocks.json](https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/blocks.json): machine-readable building-block manifest (entrypoints, inputs, outputs, deps, compatible blocks)
+- [Docs](https://blockchains.github.io/blockchainlab-api/): human docs
+- [Catalogue](https://blockchains.github.io/blockchainlab-api/v1/index.json): datasets
+- [OpenAPI](https://blockchains.github.io/blockchainlab-api/openapi.yaml): spec
+
+## Key files
+
+- [scripts/build.mjs](https://github.com/Blockchains/blockchainlab-api/blob/main/scripts/build.mjs): builder
+- [openapi.yaml](https://github.com/Blockchains/blockchainlab-api/blob/main/openapi.yaml): OpenAPI 3.1
+- [CHANGELOG.md](https://github.com/Blockchains/blockchainlab-api/blob/main/CHANGELOG.md): versioning and changes
+
+## Related
+
+- [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md): how to assemble projects from Blockchains repos
+- [Org llms.txt](https://blockchains.github.io/llms.txt) · [blocks catalogue](https://blockchains.github.io/blocks.json)
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): typed TS/Python client generated from these schemas
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): 43 MCP tools, many backed by these datasets
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): browser tools read chains and EIP/ERC/BIP data from here
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub pages and AI briefs are built on it
+- [Blockchains/blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds): source of the hackathons and events datasets

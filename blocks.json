@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
+  "schema_version": "1.0",
+  "name": "blockchainlab-api",
+  "repo": "Blockchains/blockchainlab-api",
+  "summary": "Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.",
+  "kind": [
+    "http-api",
+    "dataset"
+  ],
+  "stability": "stable",
+  "version": "v1 (schema 1.1.0)",
+  "license": "MIT",
+  "homepage": "https://blockchains.github.io/blockchainlab-api/",
+  "entrypoints": [
+    {
+      "type": "http",
+      "name": "GET /v1/{dataset}.json",
+      "ref": "https://blockchains.github.io/blockchainlab-api/v1/{dataset}.json",
+      "usage": "curl -s https://blockchains.github.io/blockchainlab-api/v1/chains.json"
+    },
+    {
+      "type": "http",
+      "name": "GET /v1/index.json",
+      "ref": "https://blockchains.github.io/blockchainlab-api/v1/index.json",
+      "usage": "catalogue: dataset, url, schema, count, generated_at, stale"
+    },
+    {
+      "type": "http",
+      "name": "GET /v1/schemas/{dataset}.schema.json",
+      "ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/",
+      "usage": "JSON Schema per dataset"
+    },
+    {
+      "type": "file",
+      "name": "openapi.yaml",
+      "ref": "openapi.yaml",
+      "usage": "https://blockchains.github.io/blockchainlab-api/openapi.yaml"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "dataset",
+      "type": "path segment",
+      "description": "bips, bridges, chains, chains-tvl, dex-volumes, eips, ercs, events, fees, glossary, grants, hackathons, l2-metrics, protocols, rpc-health, sanctioned-addresses, security-incidents, stablecoins, whitepapers, yields"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "envelope",
+      "type": "JSON",
+      "description": "{dataset, api_version, schema_version, schema_url, generated_at, source, source_url, count, data[]}"
+    }
+  ],
+  "deps": [
+    "any HTTP client",
+    "node>=20 + python3 to rebuild"
+  ],
+  "compatible_with": [
+    {
+      "repo": "Blockchains/blockchainlab-sdk",
+      "how": "typed TS/Python client generated from these schemas"
+    },
+    {
+      "repo": "Blockchains/blockchainlab-mcp",
+      "how": "43 MCP tools, many backed by these datasets"
+    },
+    {
+      "repo": "Blockchains/blockchainlab-tools",
+      "how": "browser tools read chains and EIP/ERC/BIP data from here"
+    },
+    {
+      "repo": "Blockchains/blockchains.github.io",
+      "how": "hub pages and AI briefs are built on it"
+    },
+    {
+      "repo": "Blockchains/blockchainlab-feeds",
+      "how": "source of the hackathons and events datasets"
+    }
+  ],
+  "tests": {
+    "command": "pip install jsonschema==4.23.0 pyyaml && python3 scripts/validate.py && python3 scripts/openapi.py && git diff --exit-code openapi.json",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+  }
+}
