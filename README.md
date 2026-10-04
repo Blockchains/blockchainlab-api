@@ -91,5 +91,13 @@ Run locally: `node scripts/build.mjs && python3 scripts/openapi.py`
 
 Code: MIT. Data: belongs to each named source — check its terms. Glossary text © Blockchain Lab; please attribute and link [blockchainlab.com](https://blockchainlab.com/?utm_source=github&utm_medium=readme&utm_campaign=blockchainlab-api).
 
+## Configuration
+
+None for consumers: static JSON over GitHub Pages with `Access-Control-Allow-Origin: *`, no key, no rate-limit token. The nightly build uses only public sources and the default `GITHUB_TOKEN`.
+
+## Contributing
+
+Issues and pull requests are welcome. Please read the [contributing guide](https://github.com/Blockchains/.github/blob/main/CONTRIBUTING.md), [code of conduct](https://github.com/Blockchains/.github/blob/main/CODE_OF_CONDUCT.md) and [security policy](https://github.com/Blockchains/.github/blob/main/SECURITY.md) first.
+
 ---
 Built by Blockchain Lab — [blockchainlab.com](https://blockchainlab.com/?utm_source=github&utm_medium=readme&utm_campaign=blockchainlab-api)
