@@ -1,0 +1,268 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/l2-metrics.schema.json",
+ "title": "l2-metrics",
+ "description": "Ethereum L2/L3 scaling projects: stage, category, stack, risk summary and Total Value Secured breakdown. From L2BEAT.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "host_chain": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "category": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "stack": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "purposes": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "stage": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "under_review": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "tvs_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "tvs_breakdown": {
+      "type": "object",
+      "properties": {
+       "native": {
+        "type": [
+         "null",
+         "number"
+        ]
+       },
+       "canonical": {
+        "type": [
+         "null",
+         "number"
+        ]
+       },
+       "external": {
+        "type": [
+         "null",
+         "number"
+        ]
+       },
+       "ether": {
+        "type": [
+         "null",
+         "number"
+        ]
+       },
+       "stablecoin": {
+        "type": [
+         "null",
+         "number"
+        ]
+       },
+       "btc": {
+        "type": [
+         "null",
+         "number"
+        ]
+       }
+      },
+      "required": [
+       "btc",
+       "canonical",
+       "ether",
+       "external",
+       "native",
+       "stablecoin"
+      ]
+     },
+     "tvs_change_7d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "risks": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "name": {
+         "type": [
+          "null",
+          "string"
+         ]
+        },
+        "value": {
+         "type": [
+          "null",
+          "string"
+         ]
+        },
+        "sentiment": {
+         "type": [
+          "null",
+          "string"
+         ]
+        }
+       },
+       "required": [
+        "name",
+        "sentiment",
+        "value"
+       ]
+      }
+     },
+     "l2beat_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "category",
+     "host_chain",
+     "id",
+     "l2beat_url",
+     "name",
+     "purposes",
+     "risks",
+     "stack",
+     "stage",
+     "tvs_breakdown",
+     "tvs_change_7d_pct",
+     "tvs_usd",
+     "type",
+     "under_review"
+    ]
+   }
+  }
+ }
+}

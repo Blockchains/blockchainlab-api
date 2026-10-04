@@ -1,0 +1,152 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/grants.schema.json",
+ "title": "grants",
+ "description": "Directory of blockchain ecosystem grant / funding programmes with official links. Curated by Blockchain Lab; link status re-checked nightly. No amounts are listed \u2014 read each programme's own page.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "ecosystem": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "operator": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "link_status": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "link_checked_at": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "ecosystem",
+     "id",
+     "link_checked_at",
+     "link_status",
+     "name",
+     "operator",
+     "type",
+     "url"
+    ]
+   }
+  }
+ }
+}

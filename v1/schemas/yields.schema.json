@@ -1,0 +1,187 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/yields.schema.json",
+ "title": "yields",
+ "description": "Top 500 DeFi yield pools by TVL (>= $10m) with APY, base/reward split, IL risk. Snapshot from DefiLlama; APYs change constantly and are not advice.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "pool": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "project": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "chain": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "symbol": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "tvl_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "apy": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "apy_base": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "apy_reward": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "apy_mean_30d": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "stablecoin": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "il_risk": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "exposure": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "defillama_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "apy",
+     "apy_base",
+     "apy_mean_30d",
+     "apy_reward",
+     "chain",
+     "defillama_url",
+     "exposure",
+     "il_risk",
+     "pool",
+     "project",
+     "stablecoin",
+     "symbol",
+     "tvl_usd"
+    ]
+   }
+  }
+ }
+}

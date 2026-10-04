@@ -1,0 +1,20 @@
+name: ci
+on:
+  push: { branches: [main], paths-ignore: ["v1/*.json"] }
+  pull_request:
+permissions: { contents: read }
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install jsonschema==4.23.0 pyyaml
+      - name: Committed datasets validate against committed schemas
+        run: python3 scripts/validate.py
+      - name: OpenAPI spec is up to date and parses
+        run: python3 scripts/openapi.py && git diff --exit-code openapi.json
+      - name: Live endpoints return 200 with CORS
+        run: |
+          for f in index stablecoins l2-metrics rpc-health; do
+            curl -sfI -H 'Origin: https://example.com' "https://blockchains.github.io/blockchainlab-api/v1/$f.json" | grep -qi '^access-control-allow-origin: \*' || { echo "FAIL $f"; exit 1; }
+          done

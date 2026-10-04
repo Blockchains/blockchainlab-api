@@ -1,0 +1,172 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/events.schema.json",
+ "title": "events",
+ "description": "Upcoming blockchain events from the Blockchain Lab feeds.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "upstream_generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "not_covered": {
+   "type": "array",
+   "items": {}
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "source": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "title": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "organizer": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "start": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "end": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "medium": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "verified": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "dates": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": []
+   }
+  }
+ }
+}

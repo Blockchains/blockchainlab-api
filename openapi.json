@@ -2,8 +2,8 @@
  "openapi": "3.1.0",
  "info": {
   "title": "Blockchain Lab Open Data API",
-  "version": "1.0.0",
-  "description": "Free, static, CORS-enabled JSON datasets for blockchain builders: chains, DeFi TVL, hackathons, events, whitepapers, glossary, grants, EIPs/ERCs/BIPs. Rebuilt nightly from public sources. Built by Blockchain Lab \u2014 https://blockchainlab.com",
+  "version": "1.1.0",
+  "description": "Free, static, CORS-enabled JSON datasets for blockchain builders: chains, DeFi TVL, stablecoins, yields, bridges, DEX volumes, fees, L2 metrics (L2BEAT), security incidents, OFAC-sanctioned addresses, public RPC health, hackathons, events, whitepapers, glossary, grants, EIPs/ERCs/BIPs. Versioned (/v1, semver schema_version, JSON Schema per dataset). Rebuilt nightly from public sources. Built by Blockchain Lab \u2014 https://blockchainlab.com",
   "contact": {
    "name": "Blockchain Lab",
    "url": "https://blockchainlab.com/?utm_source=github&utm_medium=openapi&utm_campaign=blockchainlab-api"
@@ -54,7 +54,29 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/bips.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/bridges.json": {
+   "get": {
+    "summary": "Cross-chain and canonical bridges ranked by TVL (DefiLlama bridge categories).",
+    "operationId": "getBridges",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama protocols (bridge categories) (https://api.llama.fi/protocols). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/bridges.schema.json"
         }
        }
       }
@@ -76,7 +98,7 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/chains.schema.json"
         }
        }
       }
@@ -98,7 +120,29 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/chains-tvl.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/dex-volumes.json": {
+   "get": {
+    "summary": "DEX trading volume by protocol (top 300 by 24h). Snapshot from DefiLlama.",
+    "operationId": "getDexVolumes",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama overview/dexs (https://api.llama.fi/overview/dexs). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/dex-volumes.schema.json"
         }
        }
       }
@@ -120,7 +164,7 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/eips.schema.json"
         }
        }
       }
@@ -142,7 +186,7 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/ercs.schema.json"
         }
        }
       }
@@ -164,7 +208,29 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/events.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/fees.json": {
+   "get": {
+    "summary": "Protocol fees by protocol (top 300 by 24h). Snapshot from DefiLlama.",
+    "operationId": "getFees",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama overview/fees (https://api.llama.fi/overview/fees). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/fees.schema.json"
         }
        }
       }
@@ -186,7 +252,7 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/glossary.schema.json"
         }
        }
       }
@@ -208,7 +274,7 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/grants.schema.json"
         }
        }
       }
@@ -230,7 +296,29 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/hackathons.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/l2-metrics.json": {
+   "get": {
+    "summary": "Ethereum L2/L3 scaling projects: stage, category, stack, risk summary and Total Value Secured breakdown. From L2BEAT.",
+    "operationId": "getL2Metrics",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: L2BEAT public API (https://l2beat.com/api/scaling/summary). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/l2-metrics.schema.json"
         }
        }
       }
@@ -252,7 +340,95 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/protocols.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/rpc-health.json": {
+   "get": {
+    "summary": "Health of popular free public RPC endpoints (EVM chains, Solana, Bitcoin): reachability, latency, block lag vs best endpoint, chain-ID check. Probed from a GitHub Actions runner (US) at build time.",
+    "operationId": "getRpcHealth",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: Blockchain Lab probe (GitHub Actions) (https://github.com/Blockchains/blockchainlab-api/blob/main/scripts/build.mjs). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/rpc-health.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/sanctioned-addresses.json": {
+   "get": {
+    "summary": "Digital currency addresses on the US Treasury OFAC SDN list, per asset. Extracted daily from the official SDN XML by github.com/0xB10C. Compliance screening aid only \u2014 verify against the official list.",
+    "operationId": "getSanctionedAddresses",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: OFAC SDN list via 0xB10C/ofac-sanctioned-digital-currency-addresses (https://github.com/0xB10C/ofac-sanctioned-digital-currency-addresses/tree/lists). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/sanctioned-addresses.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/security-incidents.json": {
+   "get": {
+    "summary": "Public record of crypto hacks and exploits: date, protocol, technique, classification, amount lost/returned. From DefiLlama's hacks database.",
+    "operationId": "getSecurityIncidents",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama hacks (https://api.llama.fi/hacks). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/security-incidents.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/stablecoins.json": {
+   "get": {
+    "summary": "Stablecoins by circulating supply with price, peg mechanism and 1d/7d/30d supply change. Snapshot from DefiLlama.",
+    "operationId": "getStablecoins",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama stablecoins (https://stablecoins.llama.fi/stablecoins?includePrices=true). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/stablecoins.schema.json"
         }
        }
       }
@@ -274,7 +450,29 @@
       "content": {
        "application/json": {
         "schema": {
-         "$ref": "#/components/schemas/Envelope"
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/whitepapers.schema.json"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/yields.json": {
+   "get": {
+    "summary": "Top 500 DeFi yield pools by TVL (>= $10m) with APY, base/reward split, IL risk. Snapshot from DefiLlama; APYs change constantly and are not advice.",
+    "operationId": "getYields",
+    "tags": [
+     "datasets"
+    ],
+    "description": "Source: DefiLlama yields (https://yields.llama.fi/pools). Rebuilt nightly by GitHub Actions.",
+    "responses": {
+     "200": {
+      "description": "Dataset envelope",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/yields.schema.json"
         }
        }
       }

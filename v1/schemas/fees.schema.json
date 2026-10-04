@@ -1,0 +1,211 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/fees.schema.json",
+ "title": "fees",
+ "description": "Protocol fees by protocol (top 300 by 24h). Snapshot from DefiLlama.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "totals": {
+   "type": "object",
+   "properties": {
+    "total_24h_usd": {
+     "type": [
+      "null",
+      "number"
+     ]
+    },
+    "total_7d_usd": {
+     "type": [
+      "null",
+      "number"
+     ]
+    },
+    "total_30d_usd": {
+     "type": [
+      "null",
+      "number"
+     ]
+    },
+    "change_1d_pct": {
+     "type": [
+      "null",
+      "number"
+     ]
+    }
+   },
+   "required": [
+    "change_1d_pct",
+    "total_24h_usd",
+    "total_30d_usd",
+    "total_7d_usd"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "rank": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "slug": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "category": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "chains": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "total_24h_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "total_7d_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "total_30d_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_1d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_7d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "defillama_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "category",
+     "chains",
+     "change_1d_pct",
+     "change_7d_pct",
+     "defillama_url",
+     "name",
+     "rank",
+     "slug",
+     "total_24h_usd",
+     "total_30d_usd",
+     "total_7d_usd"
+    ]
+   }
+  }
+ }
+}

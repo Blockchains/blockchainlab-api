@@ -1,0 +1,183 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/stablecoins.schema.json",
+ "title": "stablecoins",
+ "description": "Stablecoins by circulating supply with price, peg mechanism and 1d/7d/30d supply change. Snapshot from DefiLlama.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "symbol": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "peg_type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "peg_mechanism": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "price": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "circulating": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_1d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_7d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_30d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "chains": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "defillama_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "chains",
+     "change_1d_pct",
+     "change_30d_pct",
+     "change_7d_pct",
+     "circulating",
+     "defillama_url",
+     "id",
+     "name",
+     "peg_mechanism",
+     "peg_type",
+     "price",
+     "symbol"
+    ]
+   }
+  }
+ }
+}

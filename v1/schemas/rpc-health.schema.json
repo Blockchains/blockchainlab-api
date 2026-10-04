@@ -1,0 +1,173 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/rpc-health.schema.json",
+ "title": "rpc-health",
+ "description": "Health of popular free public RPC endpoints (EVM chains, Solana, Bitcoin): reachability, latency, block lag vs best endpoint, chain-ID check. Probed from a GitHub Actions runner (US) at build time.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "healthy": {
+   "type": [
+    "null",
+    "number"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "chain": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "chain_id": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "ok": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "latency_ms": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "block": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "chain_id_ok": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "lag_blocks": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "healthy": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "checked_at": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "error": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "chain",
+     "checked_at",
+     "healthy",
+     "ok",
+     "url"
+    ]
+   }
+  }
+ }
+}

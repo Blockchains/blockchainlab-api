@@ -1,0 +1,216 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/chains.schema.json",
+ "title": "chains",
+ "description": "EVM chain registry: chain IDs, native currency, public RPC endpoints and explorers.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "chainId": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "shortName": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "chain": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "nativeCurrency": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": [
+         "null",
+         "string"
+        ]
+       },
+       "symbol": {
+        "type": [
+         "null",
+         "string"
+        ]
+       },
+       "decimals": {
+        "type": [
+         "null",
+         "number"
+        ]
+       }
+      },
+      "required": [
+       "decimals",
+       "name",
+       "symbol"
+      ]
+     },
+     "rpc": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "explorers": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "name": {
+         "type": [
+          "null",
+          "string"
+         ]
+        },
+        "url": {
+         "type": [
+          "null",
+          "string"
+         ]
+        },
+        "standard": {
+         "type": [
+          "null",
+          "string"
+         ]
+        }
+       },
+       "required": [
+        "name",
+        "standard",
+        "url"
+       ]
+      }
+     },
+     "infoURL": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "testnet": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "status": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "chain",
+     "chainId",
+     "explorers",
+     "infoURL",
+     "name",
+     "nativeCurrency",
+     "rpc",
+     "shortName",
+     "status",
+     "testnet"
+    ]
+   }
+  }
+ }
+}

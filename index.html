@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blockchain Lab Open Data API — free blockchain datasets (chains, TVL, EIPs, grants, hackathons)</title>
+<title>Blockchain Lab Open Data API — free blockchain datasets (chains, TVL, stablecoins, yields, L2s, hacks, RPC health, EIPs)</title>
 <meta name="description" content="Free static JSON API for blockchain builders: EVM chains & RPCs, DeFi TVL, hackathons, events, 600+ whitepapers, glossary, grants, EIPs/ERCs/BIPs. Rebuilt nightly. Built by Blockchain Lab.">
 <link rel="canonical" href="https://blockchains.github.io/blockchainlab-api/">
 <meta property="og:title" content="Blockchain Lab Open Data API"><meta property="og:description" content="Free, CORS-enabled blockchain datasets rebuilt nightly from public sources."><meta property="og:image" content="https://blockchains.github.io/blockchainlab-api/social-preview.png">
@@ -23,6 +23,8 @@ curl https://blockchains.github.io/blockchainlab-api/v1/chains.json | jq '.data[
 <h2>Related</h2>
 <ul>
 <li><a href="https://blockchains.github.io/blockchainlab-tools/">Blockchain Lab Tools</a> — gas, units, ABI, tx decoder, merkle, storage slots (uses this API)</li>
+<li><a href="https://github.com/Blockchains/blockchainlab-sdk">blockchainlab-sdk</a> — typed TypeScript + Python clients for every dataset · <a href="https://github.com/Blockchains/blockchainlab-api/blob/main/CHANGELOG.md">changelog &amp; versioning</a></li>
+<li><a href="https://blockchains.github.io/">Blockchain Lab on GitHub — hub &amp; search</a></li>
 <li><a href="https://github.com/Blockchains/blockchainlab-mcp">blockchainlab-mcp</a> — MCP server + SDK so AI agents can query these datasets</li>
 <li><a href="https://github.com/Blockchains/blockchainlab-feeds">blockchainlab-feeds</a> — upstream hackathon / event / X-intel feeds</li>
 <li><a href="https://blockchainlab.com/whitepaper?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api">Whitepaper library</a> · <a href="https://blockchainlab.com/learn/glossary?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api">Glossary</a> · <a href="https://blockchainlab.com/learn/protocol-atlas?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api">Protocol atlas</a></li>
@@ -30,5 +32,5 @@ curl https://blockchains.github.io/blockchainlab-api/v1/chains.json | jq '.data[
 <footer class="mut">Built by Blockchain Lab — <a href="https://blockchainlab.com/?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api">blockchainlab.com</a>. Data belongs to the named sources. Not investment advice.</footer>
 <script>
 fetch('v1/index.json').then(r=>r.json()).then(j=>{document.getElementById('gen').textContent='Last build: '+j.generated_at+(j.errors.length?' · errors: '+j.errors.map(e=>e.dataset).join(', '):'');
-document.getElementById('rows').innerHTML=j.datasets.map(d=>`<tr><td><a href="v1/${d.dataset}.json"><code>${d.dataset}</code></a>${d.stale?' <span class=pill>stale</span>':''}</td><td>${d.count??''}</td><td>${d.description}</td><td><a href="${d.source_url}">${d.source}</a></td></tr>`).join('')})
+document.getElementById('rows').innerHTML=j.datasets.map(d=>`<tr><td><a href="v1/${d.dataset}.json"><code>${d.dataset}</code></a>${d.stale?' <span class=pill>stale</span>':''} <a href="v1/schemas/${d.dataset}.schema.json" title="JSON Schema">schema</a></td><td>${d.count??''}</td><td>${d.description}</td><td><a href="${d.source_url}">${d.source}</a></td></tr>`).join('')})
 </script></body></html>

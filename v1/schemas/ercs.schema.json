@@ -1,0 +1,155 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/ercs.schema.json",
+ "title": "ercs",
+ "description": "ERCS index (number, title, status, type, category) parsed from ethereum/ERCs.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "number": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "title": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "status": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "category": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "created": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "requires": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "number"
+       ]
+      }
+     },
+     "url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "category",
+     "created",
+     "number",
+     "requires",
+     "status",
+     "title",
+     "type",
+     "url"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/security-incidents.schema.json",
+ "title": "security-incidents",
+ "description": "Public record of crypto hacks and exploits: date, protocol, technique, classification, amount lost/returned. From DefiLlama's hacks database.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "total_lost_usd": {
+   "type": [
+    "null",
+    "number"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "date": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "classification": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "technique": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "amount_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "returned_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "chains": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "bridge_hack": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "target_type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "source": {
+      "type": "null"
+     },
+     "defillama_id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "amount_usd",
+     "bridge_hack",
+     "chains",
+     "classification",
+     "date",
+     "defillama_id",
+     "name",
+     "returned_usd",
+     "source",
+     "target_type",
+     "technique"
+    ]
+   }
+  }
+ }
+}

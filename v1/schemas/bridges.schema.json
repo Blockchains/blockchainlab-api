@@ -1,0 +1,169 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/bridges.schema.json",
+ "title": "bridges",
+ "description": "Cross-chain and canonical bridges ranked by TVL (DefiLlama bridge categories).",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "rank": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "slug": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "category": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "chains": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "tvl_usd": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "change_7d_pct": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "audits": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "defillama_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "audits",
+     "category",
+     "chains",
+     "change_7d_pct",
+     "defillama_url",
+     "name",
+     "rank",
+     "slug",
+     "tvl_usd",
+     "url"
+    ]
+   }
+  }
+ }
+}

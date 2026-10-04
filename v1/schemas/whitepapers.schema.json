@@ -1,0 +1,175 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://blockchains.github.io/blockchainlab-api/v1/schemas/whitepapers.schema.json",
+ "title": "whitepapers",
+ "description": "Blockchain Lab research corpus \u2014 whitepaper metadata (no paper text). Original sources linked.",
+ "x-schema-version": "1.1.0",
+ "type": "object",
+ "required": [
+  "dataset",
+  "generated_at",
+  "source",
+  "source_url",
+  "data"
+ ],
+ "properties": {
+  "dataset": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "api_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_version": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "schema_url": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "description": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "generated_at": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "source_url": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "built_by": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "licence_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "count": {
+   "type": [
+    "string",
+    "integer",
+    "null"
+   ]
+  },
+  "upstream_note": {
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  "data": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "slug": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "title": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "authors": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "year": {
+      "type": [
+       "null",
+       "number"
+      ]
+     },
+     "category": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "paper_type": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "topics": {
+      "type": "array",
+      "items": {
+       "type": [
+        "null",
+        "string"
+       ]
+      }
+     },
+     "original_source_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     },
+     "blockchainlab_url": {
+      "type": [
+       "null",
+       "string"
+      ]
+     }
+    },
+    "required": [
+     "authors",
+     "blockchainlab_url",
+     "category",
+     "id",
+     "original_source_url",
+     "paper_type",
+     "slug",
+     "title",
+     "topics",
+     "year"
+    ]
+   }
+  }
+ }
+}
