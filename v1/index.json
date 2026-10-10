@@ -2,7 +2,7 @@
  "name": "Blockchain Lab Open Data API",
  "version": "v1",
  "schema_version": "1.1.0",
- "generated_at": "2026-10-09T10:37:31.184Z",
+ "generated_at": "2026-10-10T09:53:41.700Z",
  "docs": "https://blockchains.github.io/blockchainlab-api/",
  "openapi": "https://blockchains.github.io/blockchainlab-api/openapi.yaml",
  "built_by": "Blockchain Lab — https://blockchainlab.com?utm_source=github&utm_medium=open-data-api&utm_campaign=blockchainlab-api",
@@ -16,7 +16,7 @@
    "source": "github.com/bitcoin/bips",
    "source_url": "https://github.com/bitcoin/bips",
    "count": 213,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "bridges",
@@ -25,8 +25,8 @@
    "description": "Cross-chain and canonical bridges ranked by TVL (DefiLlama bridge categories).",
    "source": "DefiLlama protocols (bridge categories)",
    "source_url": "https://api.llama.fi/protocols",
-   "count": 261,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 262,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "chains",
@@ -36,7 +36,7 @@
    "source": "chainid.network (ethereum-lists/chains)",
    "source_url": "https://chainid.network/chains.json",
    "count": 2802,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "chains-tvl",
@@ -45,8 +45,8 @@
    "description": "DeFi TVL by chain (USD). Snapshot from DefiLlama.",
    "source": "DefiLlama",
    "source_url": "https://api.llama.fi/v2/chains",
-   "count": 328,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 326,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "dex-volumes",
@@ -56,7 +56,7 @@
    "source": "DefiLlama overview/dexs",
    "source_url": "https://api.llama.fi/overview/dexs",
    "count": 300,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "eips",
@@ -65,8 +65,8 @@
    "description": "EIPS index (number, title, status, type, category) parsed from ethereum/EIPs.",
    "source": "github.com/ethereum/EIPs",
    "source_url": "https://github.com/ethereum/EIPs/tree/master/EIPS",
-   "count": 593,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 594,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "ercs",
@@ -76,7 +76,7 @@
    "source": "github.com/ethereum/ERCs",
    "source_url": "https://github.com/ethereum/ERCs/tree/master/ERCS",
    "count": 618,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "events",
@@ -86,7 +86,7 @@
    "source": "Blockchains/blockchainlab-feeds (ethglobal.com/events; devpost.com (blockchain hackathons))",
    "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json",
    "count": 7,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "fees",
@@ -96,7 +96,7 @@
    "source": "DefiLlama overview/fees",
    "source_url": "https://api.llama.fi/overview/fees",
    "count": 300,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "glossary",
@@ -106,7 +106,7 @@
    "source": "blockchainlab.com/learn/glossary",
    "source_url": "https://blockchainlab.com/learn/glossary",
    "count": 80,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "grants",
@@ -116,7 +116,7 @@
    "source": "Official programme pages (curated)",
    "source_url": "https://github.com/Blockchains/blockchainlab-api/blob/main/data/grants.json",
    "count": 22,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "hackathons",
@@ -126,7 +126,7 @@
    "source": "Blockchains/blockchainlab-feeds (devpost.com/api/hackathons (theme Blockchain, open+upcoming); ethglobal.com/events (future hackathons); X posts (leads only))",
    "source_url": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/hackathons/latest.json",
    "count": 4,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "l2-metrics",
@@ -135,8 +135,8 @@
    "description": "Ethereum L2/L3 scaling projects: stage, category, stack, risk summary and Total Value Secured breakdown. From L2BEAT.",
    "source": "L2BEAT public API",
    "source_url": "https://l2beat.com/api/scaling/summary",
-   "count": 100,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 99,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "protocols",
@@ -146,7 +146,7 @@
    "source": "DefiLlama",
    "source_url": "https://api.llama.fi/protocols",
    "count": 500,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "rpc-health",
@@ -156,7 +156,7 @@
    "source": "Blockchain Lab probe (GitHub Actions)",
    "source_url": "https://github.com/Blockchains/blockchainlab-api/blob/main/scripts/build.mjs",
    "count": 34,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "sanctioned-addresses",
@@ -166,7 +166,7 @@
    "source": "OFAC SDN list via 0xB10C/ofac-sanctioned-digital-currency-addresses",
    "source_url": "https://github.com/0xB10C/ofac-sanctioned-digital-currency-addresses/tree/lists",
    "count": 1060,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "security-incidents",
@@ -175,8 +175,8 @@
    "description": "Public record of crypto hacks and exploits: date, protocol, technique, classification, amount lost/returned. From DefiLlama's hacks database.",
    "source": "DefiLlama hacks",
    "source_url": "https://api.llama.fi/hacks",
-   "count": 1297,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 1299,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "stablecoins",
@@ -186,7 +186,7 @@
    "source": "DefiLlama stablecoins",
    "source_url": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
    "count": 427,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "whitepapers",
@@ -195,8 +195,8 @@
    "description": "Blockchain Lab research corpus — whitepaper metadata (no paper text). Original sources linked.",
    "source": "Blockchain Lab /api/v1/papers",
    "source_url": "https://blockchainlab.com/api/v1/papers",
-   "count": 607,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "count": 1792,
+   "generated_at": "2026-10-10T09:53:41.700Z"
   },
   {
    "dataset": "yields",
@@ -206,7 +206,7 @@
    "source": "DefiLlama yields",
    "source_url": "https://yields.llama.fi/pools",
    "count": 500,
-   "generated_at": "2026-10-09T10:37:31.184Z"
+   "generated_at": "2026-10-10T09:53:41.700Z"
   }
  ]
 }
